@@ -10,11 +10,6 @@
     padding: 0 3rem;
   }
   transition: 0.3s ease all;
-
-  h1 {
-    padding: 1.5rem 0rem;
-    border-radius: $borderRadius calc(#{borderRadius} * 10);
-  }
 }
 
 .content {
