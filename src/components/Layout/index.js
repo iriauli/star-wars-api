@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../Header/index";
-import Footer from "../Footer/index";
-
+// import Footer from "../Footer/index";
 import styles from "./Layout.module.scss";
 
 const Layout = ({ children }) => {
@@ -13,7 +12,7 @@ const Layout = ({ children }) => {
           <div className={styles.data}>{children}</div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
