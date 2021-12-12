@@ -11,15 +11,16 @@ const Header = () => {
     height: undefined,
   });
 
-  useEffect(() => {
-    const handleResize = () => {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-    window.addEventListener("resize", handleResize);
+  const handleResize = () => {
+    setSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  };
 
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -30,7 +31,7 @@ const Header = () => {
   }, [size.width, menuOpen]);
 
   const menuToggleHandler = () => {
-    setMenuOpen((p) => !p);
+    setMenuOpen((parameter) => !parameter);
   };
 
   return (
