@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.container {
+  height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+  background: $bg;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem;
+  @include breakpoint(md) {
+    padding: 0 3rem;
+  }
+  transition: 0.3s ease all;
+
+  h1 {
+    padding: 1.5rem 0rem;
+    border-radius: $borderRadius calc(#{borderRadius} * 10);
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data {
+  padding-top: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

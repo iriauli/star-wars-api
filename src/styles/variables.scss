@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap");
+
+$Inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+
+// colors
+$dark: rgb(29, 29, 29);
+$light: #ffffff;
+$bg: rgb(244, 244, 255);
+$card: rgb(224, 224, 255);
+$selected: rgb(97, 218, 251);
+
+// spacing
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+// border radius
+$borderRadius: 12px;
+
+// header height
+$headerHeight: 80px;
+$footerHeight: 70px;
+
+// media
+$breakpoint-sm: 768px;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    // 992px
+    @media (min-width: 62em) {
+      @content;
+    }
+  }
+}

@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./components/Layout/index";
+import { Routes, Route } from "react-router-dom";
+import Main from "./pages/Main";
+import People from "./pages/People";
+import Films from "./pages/Films";
+import Starships from "./pages/Starships";
+import Vehicles from "./pages/Vehicles";
+import Planets from "./pages/Planets";
+import Species from "./pages/Species";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/people" element={<People />} />
+        <Route path="/films" element={<Films />} />
+        <Route path="/starships" element={<Starships />} />
+        <Route path="/vechiles" element={<Vehicles />} />
+        <Route path="/species" element={<Species />} />
+        <Route path="/planets" element={<Planets />} />
+      </Routes>
+    </Layout>
   );
 }
 

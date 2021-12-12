@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+
+.container {
+  height: $footerHeight;
+  background: $dark;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem;
+  @include breakpoint(md) {
+    padding: 0 3rem;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span a {
+    font-size: 2.3em;
+    color: #c7d1d6;
+    transition: color 0.3s ease-out;
+    -webkit-transition: color 0.3s ease-out;
+  }
+  span a:hover {
+    color: $selected;
+    cursor: pointer;
+    transition: color 0.3s ease-out;
+    -webkit-transition: color 0.3s ease-out;
+  }
+}
