@@ -5,7 +5,7 @@ import Loader from "../../components/Loader";
 
 function FilmsId() {
   const params = useParams();
-  const id = params.id;
+  const FilmId = params.id;
 
   const [films, setFilms] = useState([]);
   const [properties, setProperties] = useState([]);
@@ -13,14 +13,14 @@ function FilmsId() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    GetFilmsInfo(id)
+    GetFilmsInfo(FilmId)
       .then((data) => {
         setFilms(data.result);
         setProperties(data.result.properties);
       })
       .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
-  }, []);
+  }, [FilmId]);
 
   const { description } = films;
   const { title, director, producer, release_date, opening_crawl } = properties;

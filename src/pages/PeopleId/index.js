@@ -5,7 +5,7 @@ import Loader from "../../components/Loader";
 
 function PeopleId() {
   const params = useParams();
-  const id = params.id;
+  const PersonId = params.id;
 
   const [people, setPeople] = useState([]);
   const [properties, setProperties] = useState([]);
@@ -13,14 +13,14 @@ function PeopleId() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    GetPeopleInfo(id)
+    GetPeopleInfo(PersonId)
       .then((data) => {
         setPeople(data.result);
         setProperties(data.result.properties);
       })
       .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
-  }, [id]);
+  }, [PersonId]);
 
   const { description } = people;
   const {
