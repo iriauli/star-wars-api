@@ -95,7 +95,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/vechiles"
+                to="/vehicles"
                 onClick={menuToggleHandler}
                 style={({ isActive }) => {
                   return {
@@ -103,7 +103,7 @@ const Header = () => {
                   };
                 }}
               >
-                Vechiles
+                Vehicles
               </NavLink>
             </li>
             <li>

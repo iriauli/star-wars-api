@@ -3,7 +3,7 @@ import { GetFilms } from "../../api/FetchData";
 import Loader from "../../components/Loader";
 import Card from "../../components/Card";
 
-function Films(props) {
+function Films() {
   const [films, setFilms] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -30,6 +30,7 @@ function Films(props) {
                   key={film.uid}
                   id={film.uid}
                   name={film.properties.title}
+                  route="films"
                 />
               ))}
             </div>

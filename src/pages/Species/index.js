@@ -3,7 +3,7 @@ import { GetSpecies } from "../../api/FetchData";
 import Loader from "../../components/Loader";
 import Card from "../../components/Card";
 
-function Species(props) {
+function Species() {
   const [species, setSpecies] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,12 @@ function Species(props) {
           ) : (
             <div>
               {species.map((specie) => (
-                <Card key={specie.uid} id={specie.uid} name={specie.name} />
+                <Card
+                  key={specie.uid}
+                  id={specie.uid}
+                  name={specie.name}
+                  route="species"
+                />
               ))}
             </div>
           )}

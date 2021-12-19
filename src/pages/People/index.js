@@ -3,7 +3,7 @@ import { GetPeople } from "../../api/FetchData";
 import Loader from "../../components/Loader";
 import Card from "../../components/Card";
 
-function People(props) {
+function People() {
   const [people, setPeople] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,12 @@ function People(props) {
           ) : (
             <div>
               {people.map((person) => (
-                <Card key={person.uid} id={person.uid} name={person.name} />
+                <Card
+                  key={person.uid}
+                  id={person.uid}
+                  name={person.name}
+                  route="people"
+                />
               ))}
             </div>
           )}

@@ -3,7 +3,7 @@ import { GetStarships } from "../../api/FetchData";
 import Loader from "../../components/Loader";
 import Card from "../../components/Card";
 
-function Starships(props) {
+function Starships() {
   const [starships, setStarships] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -30,6 +30,7 @@ function Starships(props) {
                   key={starship.uid}
                   id={starship.uid}
                   name={starship.name}
+                  route="starships"
                 />
               ))}
             </div>

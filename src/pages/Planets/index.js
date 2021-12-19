@@ -3,7 +3,7 @@ import { GetPlanets } from "../../api/FetchData";
 import Loader from "../../components/Loader";
 import Card from "../../components/Card";
 
-function Planets(props) {
+function Planets() {
   const [planets, setPlanets] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,12 @@ function Planets(props) {
           ) : (
             <div>
               {planets.map((planet) => (
-                <Card key={planet.uid} id={planet.uid} name={planet.name} />
+                <Card
+                  key={planet.uid}
+                  id={planet.uid}
+                  name={planet.name}
+                  route="planets"
+                />
               ))}
             </div>
           )}

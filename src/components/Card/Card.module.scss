@@ -2,10 +2,20 @@
 
 .card {
   background-image: linear-gradient(90deg, $card, $bg);
-  margin-bottom: 10px;
-  padding: 5px 20px;
-  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
   transition: 0.3s ease all;
+  // :hover {
+  //   background-image: linear-gradient(90deg, red, $bg);
+  // }
+  a {
+    text-decoration: none;
+  }
+}
+.card:hover {
+  background-image: linear-gradient(90deg, $cardHover, $bg);
 }
 
 // @media (min-width: $breakpoint-sm) {

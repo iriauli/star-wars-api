@@ -5,14 +5,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  img:hover {
+    transform: rotate(3deg);
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+  }
+}
+
+span {
+  font-weight: bold;
 }
 
 h1 {
-    margin: 20px 0px 20px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 p {
-    font-size: 1.25rem;
-    color: #3c3c3c;
-    line-height: 1.6em !important;
+  font-size: 1.25rem;
+  color: #3c3c3c;
+  line-height: 1.6em !important;
 }

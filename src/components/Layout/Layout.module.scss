@@ -5,7 +5,7 @@
   background: $bg;
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 0rem 1rem;
   @include breakpoint(md) {
     padding: 0 3rem;
   }
@@ -22,7 +22,7 @@
 
 .data {
   padding-top: 20px;
-  width: 100%;
+  width: 500px;
   height: 100%;
   display: flex;
   justify-content: center;

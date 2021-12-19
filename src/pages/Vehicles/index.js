@@ -3,7 +3,7 @@ import { GetVehicles } from "../../api/FetchData";
 import Loader from "../../components/Loader";
 import Card from "../../components/Card";
 
-function Vehicles(props) {
+function Vehicles() {
   const [vehicles, setVehicles] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,12 @@ function Vehicles(props) {
           ) : (
             <div>
               {vehicles.map((vehicle) => (
-                <Card key={vehicle.uid} id={vehicle.uid} name={vehicle.name} />
+                <Card
+                  key={vehicle.uid}
+                  id={vehicle.uid}
+                  name={vehicle.name}
+                  route="vehicles"
+                />
               ))}
             </div>
           )}
